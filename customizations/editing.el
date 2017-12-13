@@ -1,3 +1,18 @@
+;; Customizations relating to editing a buffer.
+
+;; Key binding to use "hippie expand" for text autocompletion
+;; http://www.emacswiki.org/emacs/HippieExpand
+(global-set-key (kbd "M-/") 'hippie-expand)
+
+;; Lisp-friendly hippie expand
+(setq hippie-expand-try-functions-list
+      '(try-expand-dabbrev
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill
+        try-complete-lisp-symbol-partially
+        try-complete-lisp-symbol))
+
+
 ;; Starts in maximum frame
 
 ;; Helm buffer
@@ -14,7 +29,7 @@
 
 
 ;; Company mode tooltip bar
-(company-quickhelp-mode 1)
+;; (company-quickhelp-mode 1)
 
 
 ;; No bell sound
@@ -38,11 +53,14 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; shell scripts
-;; (setq-default sh-basic-offset 2)
-;; (setq-default sh-indentation 2)
+(setq-default sh-basic-offset 2)
+(setq-default sh-indentation 2)
 
 ;; No need for ~ files when editing
 (setq create-lockfiles nil)
+
+;; Don't use hard tabs
+(setq-default indent-tabs-mode nil)
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)

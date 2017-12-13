@@ -1,1 +1,2 @@
-# emacs
+# John's Emacs configuration file
+

@@ -3,4 +3,6 @@ elpa/
 eshell/
 auto-save-list
 ido.last
-	
+
+url/**/*
+tramp
