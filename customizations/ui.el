@@ -1,5 +1,9 @@
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'load-path "~/.emacs.d/themes")
+
 ;; Load theme
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
+(load-theme 'tomorrow-night-bright t)
 
 ;; Show line numbers
 (global-linum-mode 1)
@@ -30,7 +34,7 @@
 (set-default 'cursor-type 'box)
 
 ;; Region box
-(set-face-attribute 'region nil :background "#000")
+;; (set-face-attribute 'region nil :background "#000")
 
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode -1)
